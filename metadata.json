@@ -1,8 +1,8 @@
 {
-  "name": " E-Commerce AI Hub",
-  "description": "A high-performance, full-stack e-commerce experience featuring AI-powered search, product management, secure checkout, and a comprehensive admin dashboard.",
   "requestFramePermissions": [
     "camera",
     "microphone"
-  ]
+  ],
+  "name": "",
+  "description": ""
 }

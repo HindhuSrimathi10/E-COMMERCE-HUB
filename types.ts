@@ -2,9 +2,9 @@
 export enum Category {
   ELECTRONICS = 'Electronics',
   FASHION = 'Fashion',
-  HOME = 'Home & Living',
-  BEAUTY = 'Beauty',
-  BOOKS = 'Books'
+  ACCESSORIES = 'Accessories',
+  FOOTWEAR = 'Footwear',
+  OUTERWEAR = 'Outerwear'
 }
 
 export interface Product {
@@ -16,10 +16,13 @@ export interface Product {
   image: string;
   stock: number;
   rating: number;
+  sizes?: string[];
+  colors?: string[];
 }
 
 export interface CartItem extends Product {
   quantity: number;
+  selectedSize?: string;
 }
 
 export interface User {
@@ -37,12 +40,4 @@ export interface Order {
   total: number;
   status: 'pending' | 'completed' | 'cancelled';
   date: string;
-}
-
-export interface AppState {
-  products: Product[];
-  cart: CartItem[];
-  user: User | null;
-  orders: Order[];
-  isCartOpen: boolean;
 }
